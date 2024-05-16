@@ -1,81 +1,81 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netcoreapp2.0;net461</TargetFrameworks>
-    <AssemblyName>Dapper.ExtraCRUD</AssemblyName>
-    <Version>1.5.2.0</Version>
-    <Authors>Wesley Hamilton</Authors>
-    <Description>A Dapper extension that was inspired by Dapper.SimpleCRUD, Dapper-Plus, and more.</Description>
-    <NeutralLanguage>en-us</NeutralLanguage>
-    <PackageReleaseNotes>Added FullyQualifiedTableName and Schema support.</PackageReleaseNotes>
-    <PackageTags>dapper orm micro-orm sql</PackageTags>
-    <PackageLicense>MIT</PackageLicense>
-    <PackageProjectUrl>https://github.com/ffhighwind/DapperExtraCRUD</PackageProjectUrl>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Copyright>Copyright (c) 2018 Wesley Hamilton</Copyright>
-    <RepositoryUrl>https://github.com/ffhighwind/DapperExtraCRUD</RepositoryUrl>
-    <RepositoryType>GIT</RepositoryType>
-    <DelaySign>false</DelaySign>
-    <RootNamespace>Dapper</RootNamespace>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <AssemblyVersion>1.5.2.0</AssemblyVersion>
-    <FileVersion>1.5.2.0</FileVersion>
-    <ProjectGuid>{4DBE71C1-2ECD-4192-BC66-E4D1C8DCEC08}</ProjectGuid>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
-    <PackageIcon>DapperExtraCRUD-200x200.png</PackageIcon>
-    <PackageIconUrl />
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.0;netcoreapp2.0;net461;net48;net8.0</TargetFrameworks>
+		<AssemblyName>Dapper.ExtraCRUD</AssemblyName>
+		<Version>1.5.2.0</Version>
+		<Authors>Wesley Hamilton</Authors>
+		<Description>A Dapper extension that was inspired by Dapper.SimpleCRUD, Dapper-Plus, and more.</Description>
+		<NeutralLanguage>en-us</NeutralLanguage>
+		<PackageReleaseNotes>Added FullyQualifiedTableName and Schema support.</PackageReleaseNotes>
+		<PackageTags>dapper orm micro-orm sql</PackageTags>
+		<PackageLicense>MIT</PackageLicense>
+		<PackageProjectUrl>https://github.com/ffhighwind/DapperExtraCRUD</PackageProjectUrl>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Copyright>Copyright (c) 2018 Wesley Hamilton</Copyright>
+		<RepositoryUrl>https://github.com/ffhighwind/DapperExtraCRUD</RepositoryUrl>
+		<RepositoryType>GIT</RepositoryType>
+		<DelaySign>false</DelaySign>
+		<RootNamespace>Dapper</RootNamespace>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<AssemblyVersion>1.5.2.0</AssemblyVersion>
+		<FileVersion>1.5.2.0</FileVersion>
+		<ProjectGuid>{4DBE71C1-2ECD-4192-BC66-E4D1C8DCEC08}</ProjectGuid>
+		<SignAssembly>true</SignAssembly>
+		<AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+		<PackageIcon>DapperExtraCRUD-200x200.png</PackageIcon>
+		<PackageIconUrl />
+	</PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)'=='Debug'">
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>full</DebugType>
+		<Optimize>false</Optimize>
+		<DefineConstants>DEBUG;TRACE</DefineConstants>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+	</PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)'=='Release'">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <OutputPath>bin\lib\</OutputPath>
-    <DocumentationFile>bin\lib\Dapper.ExtraCRUD.xml</DocumentationFile>
-  </PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)'=='Release'">
+		<DebugType>pdbonly</DebugType>
+		<Optimize>true</Optimize>
+		<DefineConstants>TRACE</DefineConstants>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+		<OutputPath>bin\lib\</OutputPath>
+		<DocumentationFile>bin\lib\Dapper.ExtraCRUD.xml</DocumentationFile>
+	</PropertyGroup>
 
-  <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp2.0'">
-    <DefineConstants>NETCOREAPP;NETCOREAPP2_0</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
-    <DefineConstants>NETSTANDARD;NETSTANDARD2_0</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(TargetFramework)'=='net461'">
-    <DefineConstants>NETFRAMEWORK;NET461</DefineConstants>
-  </PropertyGroup>
+	<PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp2.0'">
+		<DefineConstants>NETCOREAPP;NETCOREAPP2_0</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+		<DefineConstants>NETSTANDARD;NETSTANDARD2_0</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(TargetFramework)'=='net461'">
+		<DefineConstants>NETFRAMEWORK;NET461</DefineConstants>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Extra\Adapters\OracleAdapter.cs" />
-    <Compile Remove="Extra\Internal\TimeInterval.cs" />
-    <None Include="..\Images\DapperExtraCRUD-200x200.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-    <None Include="Extra\Adapters\OracleAdapter.cs" />
-    <PackageReference Include="Dapper.StrongName" Version="2.1.35" />
-    <PackageReference Include="Fasterflect.Reflect" Version="3.1.0" />
-    <PackageReference Include="System.Linq.Expressions" Version="4.3.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<Compile Remove="Extra\Adapters\OracleAdapter.cs" />
+		<Compile Remove="Extra\Internal\TimeInterval.cs" />
+		<None Include="..\Images\DapperExtraCRUD-200x200.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+		<None Include="Extra\Adapters\OracleAdapter.cs" />
+		<PackageReference Include="Dapper.StrongName" Version="2.1.35" />
+		<PackageReference Include="Fasterflect.Reflect" Version="3.1.0" />
+		<PackageReference Include="System.Linq.Expressions" Version="4.3.0" />
+	</ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)'=='netstandard2.0' OR '$(TargetFramework)'=='netcoreapp2.0'">
-    <PackageReference Include="Microsoft.CSharp" Version="4.3.0" />
-    <PackageReference Include="System.Data.SqlClient" Version="4.3.0" />
-    <PackageReference Include="System.ComponentModel.Annotations" Version="4.3.0" />
-  </ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)'=='netstandard2.0' OR '$(TargetFramework)'=='netcoreapp2.0' OR '$(TargetFramework)'=='net8.0'">
+		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+		<PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+		<PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+	</ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)'=='net461'">
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-  </ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)'=='net461' OR '$(TargetFramework)'=='net48'">
+		<Reference Include="Microsoft.CSharp" />
+		<Reference Include="System.ComponentModel.DataAnnotations" />
+	</ItemGroup>
 </Project>

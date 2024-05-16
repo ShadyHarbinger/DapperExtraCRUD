@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netcoreapp2.0;net461</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netcoreapp2.0;net461;net48;net8.0</TargetFrameworks>
     <AssemblyName>Dapper.ExtraCRUD.Cache</AssemblyName>
     <Version>1.5.2.0</Version>
     <Authors>Wesley Hamilton</Authors>
