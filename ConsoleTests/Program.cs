@@ -36,7 +36,7 @@ using Dapper.Extra.Cache;
 using DapperExtraCRUD.Example;
 using System.Threading.Tasks;
 using System.Reflection;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace ConsoleTests
 {

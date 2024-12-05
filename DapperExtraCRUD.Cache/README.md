@@ -9,7 +9,7 @@ A cache framework for Dapper.ExtraCRUD. This combines the an AutoAccessObject, D
 
 ```csharp
 using System;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using Dapper.Extra.Annotations;
 using Dapper.Extra.Cache;
 using Dapper;
